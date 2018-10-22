@@ -1,1 +1,19 @@
 <h1>Contact Page</h1>
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    {{input type="email" value=emailAddress class="form-control" id="contactEmail" aria-describedby="emailHelp" placeholder="Enter email"}}
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Message</label>
+    {{textarea value=message class="form-control" id="contactTextarea" placeholder="Message"}}
+  </div>
+  <button disabled={{isDisabled}} {{action 'saveContactForm'}} type="submit" class="btn btn-primary">Send</button>
+</form>
+
+  <br /><br />
+
+ {{#if responseMessage}}
+  <div class="alert alert-success">{{responseMessage}}</div>
+  {{/if}}
