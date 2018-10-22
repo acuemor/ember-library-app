@@ -12,7 +12,7 @@ export default Controller.extend({
 	actions: {
 
 		saveContactForm() {
-		  this.set('responseMessage', `Thank you! We've just saved your form. Email: ${this.get('emailAddress')} - Message: ${this.get('message')}`);
+		  this.set('responseMessage', `Thank you! We've just saved your form. Email: ${this.get('emailAddress')} - Message: ${this.get('message')}.`);
 		  this.set('emailAddress', '');
 		  this.set('message', '');
 		}
