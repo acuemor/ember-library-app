@@ -1,7 +1,6 @@
 # library-app
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Dummy application to lear Ember JS in depth. Uses firebase for hosting and application database.
 
 ## Prerequisites
 
