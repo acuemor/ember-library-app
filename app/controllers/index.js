@@ -11,7 +11,10 @@ export default Controller.extend({
   actions: {
 
     saveInvitation() {
-      alert(`Saving of the following email address is in progress ${this.get('emailAddress')}`);
+      const email = this.emailAddress;
+      const newInvitation = this.store.createRecord('invitation', {email: email}); // Invitation es el modelo, y email es uno de los campos que tiene el modelo.
+      newInvitation.save();
+      
       this.set('responseMessage', `Thank you! We've just saved your email address: ${this.get('emailAddress')}`);
       this.set('emailAddress', '');
     }
