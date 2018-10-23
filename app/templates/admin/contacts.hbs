@@ -1,0 +1,22 @@
+{{! template-lint-disable }}
+
+<h1>Contacts </h1>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>E-mail</th>
+      <th>Messages</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each model as |contacts|}}
+    <tr>
+      <th>{{contacts.id}}</th>
+      <td>{{contacts.email}}</td>
+      <td>{{contacts.message}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
