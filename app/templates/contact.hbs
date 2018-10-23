@@ -1,1 +1,21 @@
 <h1>Contact Page</h1>
+
+<form>
+  <div class="form-group has-feedback {{if emailAddressFormat 'has-success'}}">
+    <label for="exampleInputEmail1">Email address</label>
+    {{input type="email" value=emailAddress class="form-control" id="contactEmail" aria-describedby="emailHelp" placeholder="Enter email"}}
+	{{#if emailAddressFormat}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+  </div>
+  <div class="form-group has-feedback {{if emailAddressSize 'has-success'}}">
+    <label for="exampleInputPassword1">Message</label>
+    {{textarea value=message class="form-control" id="contactTextarea" placeholder="Message"}}
+	{{#if emailAddressSize}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+  </div>
+  <button disabled={{isDisabled}} {{action 'saveContactForm'}} type="submit" class="btn btn-primary">Send</button>
+</form>
+
+  <br /><br />
+
+ {{#if responseMessage}}
+  <div class="alert alert-success">{{responseMessage}}</div>
+  {{/if}}
