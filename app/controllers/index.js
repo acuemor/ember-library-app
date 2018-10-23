@@ -16,12 +16,11 @@ export default Controller.extend({
       });
       newInvitation.save()
       .then((response) => {
-        console.log("Email address is saved.", response);
         this.set("responseMessage", `Thank you! We've just saved your email address: ${this.get("emailAddress")}`);
         this.set("emailAddress", "");
       })
       .catch((reason) => {
-        console.error('Error con la promesa. Razón: ' + reason);
+        // console.error('Error con la promesa. Razón: ' + reason);
       });
     }
   }
